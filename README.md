@@ -1,2 +1,2 @@
 # dimensional_modeling
-Repo containing example of cumulative table design for dimension modeling of data 
+Repo containing example of cumulative table design for dimensional data modeling
