@@ -75,6 +75,26 @@ FROM   last_year ly
        FULL OUTER JOIN this_year ty
                     ON ly.actor_id = ty.actor_id 
 
+  /*
+
+  Output :
+
++-------------+----------+------------------------------------------------------------------------------------------------------------------------+-----------+---------------+--------------+
+| Actor       | Actor ID | Films                                                                                                                  | Is Active | Quality Class | Current Year |
++-------------+----------+------------------------------------------------------------------------------------------------------------------------+-----------+---------------+--------------+
+| Harold Lloyd| nm0516001| [["The Patchwork Girl of Oz", 398, 5.5, "tt0004457"]]                                                                   | false     | bad          | 1918        |
+| John Ford   | nm0000406| [["The Birth of a Nation", 22989, 6.3, "tt0004972"]]                                                                   | true      | average      | 1915        |
+| John Ford   | nm0000406| [["The Birth of a Nation", 22989, 6.3, "tt0004972"]]                                                                   | false     | average      | 1916        |
+| John Ford   | nm0000406| [["The Birth of a Nation", 22989, 6.3, "tt0004972"]]                                                                   | false     | average      | 1917        |
+| John Ford   | nm0000406| [["The Birth of a Nation", 22989, 6.3, "tt0004972"]]                                                                   | false     | average      | 1918        |
+| Lillian Gish| nm0001273| [["Judith of Bethulia", 1259, 6.1, "tt0004181"], ["Home, Sweet Home", 190, 5.8, "tt0003167"]]                       | true      | bad          | 1914        |
+| Lillian Gish| nm0001273| [["The Birth of a Nation", 22989, 6.3, "tt0004972"], ["Judith of Bethulia", 1259, 6.1, "tt0004181"], ["Home, Sweet Home", 190, 5.8, "tt0003167"]] | true      | average      | 1915        |
+| Lillian Gish| nm0001273| [["Intolerance: Love's Struggle Throughout the Ages", 14378, 7.7, "tt0006864"], ["The Birth of a Nation", 22989, 6.3, "tt0004972"], ["Judith of Bethulia", 1259, 6.1, "tt0004181"], ["Home, Sweet Home", 190, 5.8, "tt0003167"]] | true      | good         | 1916        |
+| Lillian Gish| nm0001273| [["Intolerance: Love's Struggle Throughout the Ages", 14378, 7.7, "tt0006864"], ["The Birth of a Nation", 22989, 6.3, "tt0004972"], ["Judith of Bethulia", 1259, 6.1, "tt0004181"], ["Home, Sweet Home", 190, 5.8, "tt0003167"]] | false     | good         | 1917        |
+| Lillian Gish| nm0001273| [["Hearts of the World", 918, 6.4, "tt0009150"], ["Intolerance: Love's Struggle Throughout the Ages", 14378, 7.7, "tt0006864"], ["The Birth of a Nation", 22989, 6.3, "tt0004972"], ["Judith of Bethulia", 1259, 6.1, "tt0004181"], ["Home, Sweet Home", 190, 5.8, "tt0003167"]] | true      | average      | 1918        |
++-------------+----------+------------------------------------------------------------------------------------------------------------------------+-----------+---------------+--------------+
+
+*/
 
 -- DDL command for creating the slowly changing dimensions type 2 table 
 
